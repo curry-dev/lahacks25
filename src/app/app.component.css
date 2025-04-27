@@ -1,0 +1,30 @@
+.container {
+    position: relative;
+}
+
+#logo a {
+    text-decoration: none;
+    /* color: black; */
+}
+
+#profile {
+    text-align: end;
+}
+
+#profile-name {
+    text-decoration: none;
+    /* color: black; */
+}    
+
+footer {
+    z-index: 100;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    /* background-color: white; */
+    background-color: #FFF9F0;
+    align-items: center;
+    height: 56px;
+    display: flex;
+    justify-content: center;
+}

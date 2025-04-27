@@ -1,1 +1,71 @@
-<p>home works!</p>
+<div class="container-fluid d-flex flex-column justify-content-center align-items-center home-container">
+
+    <div class="row text-center">
+        <div class="col d-flex align-items-center justify-content-center hi-name">
+            <img src="assets/brain.png" /> 
+            Make Studying *Less* Boring
+            <img src="assets/bubble.png" />
+        </div>
+    </div>
+
+    <div class="row mt-4 text-center g-2">
+        <div class="col">
+            <div class="upload-container">
+                <p><i class="fa-regular fa-file-lines"></i> Upload a PDF</p>
+                <button class="btn-3d" (click)="fileInput.click()">Upload</button>
+                <input type="file" #fileInput (change)="onFileSelected($event)" style="display:none;"/>
+            </div>
+              
+        </div>
+        <div class="col">
+            <div id="ask-something-container">
+                <p>Ask something</p>
+                <input [(ngModel)]="userQuestion" id="ask-something-input" type="text" class="form-control" placeholder="what is a hashmap" />
+            </div>
+        </div>
+    </div>
+
+    <div class="row mt-4 text-center">
+        <div class="col d-flex flex-wrap justify-content-center gap-3">
+            <mat-form-field appearance="fill" class="opaque-background">
+                <mat-label>Choose mode</mat-label>
+                <mat-select [(ngModel)]="selectedMode" required>
+                    <mat-option value="podcast">Podcast</mat-option>
+                    <mat-option value="fiveyo">Explain like a 5yo</mat-option>
+                    <mat-option value="funny">Funny</mat-option>
+                    <mat-option value="brainrot">Brain Rot</mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+    </div>
+
+    <div class="row mt-4 text-center g-2">
+        <div class="col d-flex flex-wrap justify-content-center gap-3">
+             <span id="generate-conversation-btn" (click)="getConversation(userQuestion, selectedMode)">Generate the conversation!</span>
+        </div>
+    </div>
+
+    <div class="row mt-4 text-center" id="audio-box">
+        <div class="col d-flex flex-wrap justify-content-center gap-3">
+            <img [src]="imgpath1" alt="person1" id="person-img1">
+            <img [src]="imgpath2" alt="person2" id="person-img2">
+        </div>
+        <div id="spinner" *ngIf="isLoading">Loading...</div>
+        <div [ngStyle]="{ color: speaker === 'person1' ? '#40c6bc' : '#c2b0c6' }">{{ text }}</div>
+    </div>
+
+    <div class="row mt-4 text-center g-2">
+        <div class="col">
+            <div>
+                <button class="btn-3d">Summarize</button>
+            </div>
+        </div>
+        <div class="col">
+            <div>
+                <button class="btn-3d">Go Again</button>
+            </div>
+        </div>
+    </div>
+
+</div>
+  

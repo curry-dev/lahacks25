@@ -1,0 +1,114 @@
+.home-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 500px;
+    width: 100%;
+  
+    font-family: "Jua", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .home-container .row,
+  .home-container .col {
+    width: 100%;
+  }
+  
+  .hi-name {
+    font-size: 2rem;
+    font-weight: 600;
+  }
+  
+  #generate-conversation-btn {
+    background-color: #F9A826;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 20px;
+  }
+  
+  #audio-box {
+    padding: 50px 0;
+    background-color: #FFF5D9;
+    border: 2.5px solid rgb(189, 189, 189);
+    border-radius: 15px;
+    /* font-size: 20px; */
+  }
+  
+  .btn-3d {
+    background-color: transparent;
+    border: 2.5px solid rgb(189, 189, 189);
+    padding: 12px 20px;
+    border-radius: 10px;
+    transition: all 0.2s ease-in-out;
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    text-align: center;
+    flex: 1 1 auto;
+    /* font-size: 20px; */
+  }
+  
+  .btn-3d:hover {
+    background-color: white;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  .btn-3d:active {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transform: translateY(2px);
+  }
+  
+  #ask-something-input {
+    background-color: transparent;
+    border: 2.5px solid rgb(189, 189, 189);
+    padding: 12px 20px;
+    border-radius: 10px;
+  }
+  
+  #ask-something-input:focus {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    background-color: white;
+  }
+  
+  #person-img1, #person-img2 {
+    height: 150px;
+    width: auto;
+  }
+  
+  #person-img1 {
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+  }
+  
+  .opaque-background .mat-form-field-flex {
+    background-color: white;
+    /* font-size: 20px; */
+  }
+  
+  .mat-form-field-appearance-fill .mat-form-field-flex {
+    background-color: white;
+  }
+  
+  .upload-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* font-size: 20px; */
+  }
+  
+  #ask-something-container, #ask-something-input {
+    /* font-size: 20px; */
+  }
+  
+  img {
+    height: 100px;
+    width: auto;
+  }
+  
+  
